@@ -24,3 +24,5 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
+
+langchain-groq
