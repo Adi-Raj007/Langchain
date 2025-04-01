@@ -27,3 +27,4 @@ scikit-learn
 
 langchain-groq
 streamlit
+pydantic
