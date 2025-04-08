@@ -12,7 +12,8 @@ class Itinerary(BaseModel):
 
 model=ChatGroq(model="llama3-70b-8192")
 structure_model=model.with_structured_output(Itinerary)
+
 result=structure_model.invoke("""Hi , How are you , I have a plan to travel new country like India ,Japan etc give me a best itinerary for these in my budget so that it does  not cost much and i want to go for a week or two so plan wisely""")
-print(result)
+print(result.model_dump_json())
 
 """These are the sample Prompt and their Output so You can adjust your all input and output by adjusting them """
