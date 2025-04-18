@@ -20,6 +20,7 @@ template_2=PromptTemplate(
 )
 
 Parser=StrOutputParser()
-chain =template_1|model|Parser|template_2|model|Parser
+chain_1=template_1|model|Parser
+chain_2=template_2|model|Parser
+chain=chain_1|chain_2
 result=chain.invoke({'place_from': 'Delhi','place_to_visit':'Ahemdabad','No_of_days':'5','name': 'place_to_visit'})
-print(result)

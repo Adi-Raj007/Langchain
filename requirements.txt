@@ -28,3 +28,5 @@ scikit-learn
 langchain-groq
 streamlit
 pydantic
+pypdf
+langchain-community
