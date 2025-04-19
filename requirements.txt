@@ -30,3 +30,4 @@ streamlit
 pydantic
 pypdf
 langchain-community
+langchain-experimental
