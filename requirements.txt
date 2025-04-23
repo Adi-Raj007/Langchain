@@ -1,6 +1,7 @@
 # LangChain Core
 langchain
 langchain-core
+langchain-community
 
 # OpenAI Integration
 langchain-openai
@@ -28,6 +29,5 @@ scikit-learn
 langchain-groq
 streamlit
 pydantic
-pypdf
-langchain-community
-langchain-experimental
+chromadb
+sentence-transformers
