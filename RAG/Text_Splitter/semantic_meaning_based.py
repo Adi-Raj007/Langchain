@@ -18,11 +18,11 @@ embeddings = OpenAIEmbeddings(
 
 # 🔪 Semantic chunking using Groq-powered embeddings
 text_splitter = SemanticChunker(
-    embeddings,
+    embeddings=embeddings,
     breakpoint_threshold_type="standard_deviation",
     breakpoint_threshold_amount=3
 )
 splitted_docs=text_splitter.split_documents(docs)
-print(splitted_docs)
+print(splitted_docs[0].page_content)
 
 
