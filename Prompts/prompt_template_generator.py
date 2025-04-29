@@ -1,12 +1,17 @@
 from langchain_core.prompts import PromptTemplate
-template=PromptTemplate(
-    template="""
-    Plan a concise itinerary for a traveler starting from "{place_from}" to visit "{place_to_visit}" over "{No_of_days}" days.
-    Include key attractions, local experiences, and a brief recommendation for each day.
-    Keep the output short, actionable, and ensure pricing details are included. And make it shorter to 1000 token and finally give itienery  in form of   table . 
-    give incomplete message if data is missing.
-    """,
-    input_variables=["place_to_visit", "place_from", "No_of_days"]
 
+prompt = PromptTemplate(
+    template="""
+               You are a helpful assistant.
+               Answer ONLY from the provided transcript context.
+               If the context is insufficient, just say you don't know.
+
+               Context:
+               {context}
+
+               Question: {question}
+           """,
+    input_variables=["context", "question"]
 )
-template.save('template.json')
+
+prompt.save('RAG/rag_youtube_documents/template.json')
