@@ -5,6 +5,7 @@ from typing import Optional
 class VideoRequest(BaseModel):
     youtube_url: str=Field(description="Youtube video link")
 
+
 class VideoResponse(BaseModel):
     video_response:str=Field(description="The answer of the question")
 class ChatRequest(BaseModel):
