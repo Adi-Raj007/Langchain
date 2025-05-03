@@ -1,17 +1,21 @@
 from langchain_core.prompts import PromptTemplate
-
 prompt = PromptTemplate(
     template="""
-               You are a helpful assistant.
-               Answer ONLY from the provided transcript context.
-               If the context is insufficient, just say you don't know.
+You are a helpful and professional summarization assistant.
 
-               Context:
-               {context}
+Your task is to generate a concise and well-structured summary of the video content provided in the context.
+- Focus only on the actual transcript content.
+- Do not speculate or include internal thoughts.
+- Avoid using phrases like "I think" or "It seems".
+- Do not mention the transcript itself.
+- Write in a clear, formal tone.
 
-               Question: {question}
-           """,
+Context:
+{context}
+
+Question: {question}
+""",
     input_variables=["context", "question"]
 )
 
-prompt.save('RAG/rag_youtube_documents/template.json')
+prompt.save('template_2.json')
